@@ -84,17 +84,23 @@ textarea {
 .list__element-text {
   font-size: 4rem;
   white-space: nowrap;
-  padding: 1rem 2rem;
+  text-transform: lowercase;
+  padding: 2rem;
+  position: relative;
+}
+.list__element-text::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  content: "";
+  background: #595959;
+  height: 5px;
+  width: 15px;
+  border-radius: 100vw;
 }
 .list__element-text::first-letter {
   text-transform: capitalize;
-}
-.list__element-circle {
-  content: "";
-  border: solid 2px #595959;
-  height: 30%;
-  aspect-ratio: 1/1;
-  border-radius: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

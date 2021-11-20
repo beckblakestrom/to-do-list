@@ -56,8 +56,21 @@ $color-grey: hsl(0, 0%, 95%);
 		&-text {
 			font-size: 4rem;
 			white-space: nowrap;
+			text-transform: lowercase;
+			padding: 2rem;
+			position: relative;
 
-			padding: 1rem 2rem;
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				content: "";
+				background: $color-dark;
+				height: 5px;
+				width: 15px;
+				border-radius: 100vw;
+			}
 
 			&::first-letter {
 				text-transform: capitalize;
@@ -65,11 +78,11 @@ $color-grey: hsl(0, 0%, 95%);
 		}
 
 		&-circle {
-			content: "";
-			border: solid 2px $color-dark;
-			height: 30%;
-			aspect-ratio: 1/1;
-			border-radius: 100%;
+			// content: "";
+			// border: solid 3px $color-dark;
+			// height: 2rem;
+			// aspect-ratio: 1/1;
+			// border-radius: 100%;
 		}
 	}
 }
