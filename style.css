@@ -14,6 +14,9 @@
 
 html {
   font-size: 62.5%;
+  font-family: mrs-eaves, serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*
@@ -38,6 +41,60 @@ table {
 /* Revert the 'white-space' property for textarea elements on Safari */
 textarea {
   white-space: revert;
+}
+
+.app-container {
+  position: relative;
+  height: 60vh;
+  width: 60vw;
+  background: #f2f2f2;
+  outline: 2px solid #595959;
+  outline-offset: 5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  color: #595959;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+.header > * {
+  padding: 1rem;
+}
+.header__today-is::first-letter {
+  text-transform: capitalize;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.list__element {
+  display: flex;
+  align-items: baseline;
+}
+.list__element-text {
+  font-size: 4rem;
+  white-space: nowrap;
+  padding: 1rem 2rem;
+}
+.list__element-text::first-letter {
+  text-transform: capitalize;
+}
+.list__element-circle {
+  content: "";
+  border: solid 2px #595959;
+  height: 30%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
